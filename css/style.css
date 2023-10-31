@@ -1,0 +1,140 @@
+.inner {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    border-bottom: 1px solid #ddd;
+    transition: 0.5s;
+}
+
+.header.on {
+    background: #fff;
+}
+
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+}
+
+.header.on .inner {
+    line-height: 80px;
+}
+
+header .gnb>ul {
+    display: flex;
+    gap: 60px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    white-space: nowrap;
+}
+
+
+.mainSlide .itm01 {
+    width: 2000px;
+    height: 700px;
+    background: url(../imges/vi_01.jpg)no-repeat center center/cover;
+}
+
+.mainSlide .itm02 {
+    width: 2000px;
+    height: 700px;
+    background: url(../imges/vi_02.jpg)no-repeat center center/cover;
+}
+
+.mainSlide .itm03 {
+    width: 2000px;
+    height: 700px;
+    background: url(../imges/vi_03.jpg)no-repeat center center/cover;
+}
+
+.mainSlide .itm {
+    position: relative;
+}
+
+.mainVisual {
+    position: relative;
+}
+
+.mainSlide .slogen p {
+    color: #000
+}
+
+.mainVisual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+}
+
+.mainVisual .arrows i {
+    position: absolute;
+    top: 0;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 0 #000;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.mainVisual .arrows .left {
+    left: -16%;
+}
+
+.mainVisual .arrows .right {
+    right: -16%;
+}
+
+.mainVisual .num {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin: 0 0 0 585px;
+    transform: translate(-100%, 0);
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.mainEvent {
+    padding: 120px 0;
+}
+
+.mainEvent .innerContant {
+    display: flex;
+    gap: 30px;
+}
+
+.mainEvent .innerContant figure {
+    flex: 1;
+}
+
+.mainEvent .innerContant .img_box {
+    margin: 0;
+}
+
+.mainEvent .Contant strong {
+    display: block;
+    margin: 0 0 14px 0;
+    font-size: 20px;
+    font-weight: 500;
+    background: #000;
+}
