@@ -11,8 +11,8 @@
     right: 0;
     z-index: 999;
 
-    border-bottom: 1px solid #ddd;
-    transition: 0.5s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5;
 }
 
 .header.on {
@@ -24,10 +24,17 @@
     display: flex;
     justify-content: space-between;
     line-height: 100px;
+    color: #000;
 }
 
 .header.on .inner {
     line-height: 80px;
+}
+
+.header.gnb {
+    height: 30px;
+    font-size: 17PX;
+    font-weight: 100;
 }
 
 header .gnb>ul {
@@ -42,19 +49,16 @@ header .gnb>ul {
 
 
 .mainSlide .itm01 {
-    width: 2000px;
     height: 700px;
     background: url(../imges/vi_01.jpg)no-repeat center center/cover;
 }
 
 .mainSlide .itm02 {
-    width: 2000px;
     height: 700px;
     background: url(../imges/vi_02.jpg)no-repeat center center/cover;
 }
 
 .mainSlide .itm03 {
-    width: 2000px;
     height: 700px;
     background: url(../imges/vi_03.jpg)no-repeat center center/cover;
 }
@@ -65,11 +69,36 @@ header .gnb>ul {
 
 .mainVisual {
     position: relative;
+    margin: 0 0 70px 0;
+}
+
+.mainSlide .slogen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.mainSlide .slogen strong {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0 0 24px 0;
+    /*상 우 좌 하*/
+    color: #000;
 }
 
 .mainSlide .slogen p {
-    color: #000
+    display: block;
+    font-size: 18px;
+    font-weight: 20px;
+    color: #000;
+    line-height: 1.5;
 }
+
 
 .mainVisual .arrows {
     position: absolute;
@@ -85,22 +114,71 @@ header .gnb>ul {
     top: 0;
     font-size: 40px;
     color: #fff;
+    background: #000;
     text-shadow: 1px 1px 0 #000;
     border: 2px solid #fff;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 20%;
     box-shadow: 1px 1px 0 #000;
     transform: translate(0, -50%);
     cursor: pointer;
 }
 
 .mainVisual .arrows .left {
-    left: -16%;
+    left: -18%;
 }
 
 .mainVisual .arrows .right {
-    right: -16%;
+    right: -18%;
 }
+
+.mainVisual .menu {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.mainVisual .menu a {
+    position: relative;
+    display: block;
+    padding: 0 20px 0 0;
+    height: 24px;
+    color: #fff;
+
+}
+
+.mainVisual .menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #333;
+}
+
+.mainVisual .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: #fe3411;
+}
+
+.mainVisual .menu li.on a::after {
+    transition: 3s;
+    width: 100%;
+}
+
 
 .mainVisual .num {
     position: absolute;
@@ -121,6 +199,10 @@ header .gnb>ul {
 .mainEvent .innerContant {
     display: flex;
     gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+
 }
 
 .mainEvent .innerContant figure {
@@ -131,10 +213,30 @@ header .gnb>ul {
     margin: 0;
 }
 
-.mainEvent .Contant strong {
+.mainEvent .innerContant strong {
     display: block;
-    margin: 0 0 14px 0;
+    padding: 8px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
     background: #000;
+}
+
+.mainEvent .img_box {
+    margin: 0 0 40px 0;
+
+}
+
+.mainEvent .img_box {
+    overflow: hidden;  
+}
+
+
+.mainEvent .img_box img {
+    transition: 1s;
+}
+
+.mainEvent .img_box:hover img {
+    transform: scale(1.1);
 }
