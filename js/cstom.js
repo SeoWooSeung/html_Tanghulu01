@@ -55,9 +55,9 @@ $(function () {
     $(window).on('scroll', function () {
         const sct = $(window).scrollTop();
         if (sct > 100) {
-            $('.header').addClass('on')
+            $('.header').addClass('on');
         } else {
-            $('.header').removeClass('on')
+            $('.header').removeClass('on');
         }
     })
 
